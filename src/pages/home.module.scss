@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 70px; 
+  padding-bottom: 70px; 
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-around;
+}

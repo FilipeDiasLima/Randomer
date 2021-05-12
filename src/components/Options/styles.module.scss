@@ -1,0 +1,32 @@
+
+.interval {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+  > span {
+    font-size: 20px;
+    font-weight: 600;
+    align-self: flex-start;
+    // color: #3DE26B;
+  }
+
+  > input {
+    margin-top: 5px;
+    padding: 12px 20px;
+    background: #292929;
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
+    color: #f2f2f2; 
+    border: 1px solid #3DE26B;
+  }
+}
+

@@ -1,0 +1,223 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  font-family: MuseoModerno;
+  font-size: 45px;
+
+  p {
+    color: #3DE26B;  
+  }
+
+  p + p {
+    color: #F2F2F2;
+  }
+}
+
+.buttonSelected {
+  min-width: 350px;
+  min-height: 220px;
+  width: 100%;
+  border-radius: 20px;
+  background: #EEFFF3;
+  box-shadow: 0px 0px 15px rgba(61, 226, 107, 0.6);
+  border: none;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4D4D4D;
+
+  transition: 0.3s;
+
+  > strong {
+    font-weight: bold;
+    font-size: 40px;
+    color: #3DE26B;
+  }
+
+  > img {
+    margin-bottom: 8px;
+  }
+  
+  & + button {
+    margin-top: 30px;
+  }
+
+  &:hover {
+    border: 1px solid #3DE26B;
+  }
+  
+}
+
+.buttonUnselected {
+  min-width: 350px;
+  min-height: 220px;
+  width: 100%;
+  border-radius: 20px;
+  background: #515151;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  color: #F2F2F2;
+
+  transition: 0.3s;
+
+  > strong {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  > img {
+    margin-bottom: 8px;
+    color: #f2f2f2;
+  }
+  
+  & + button {
+    margin-top: 30px;
+  }
+
+  &:hover {
+    border: 1px solid #3DE26B;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@property --num1 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --num2 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --num3 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.randomStrong1 {
+  animation: counter 1.6s infinite alternate ease-in-out;
+  counter-reset: num1 var(--num1);
+  font: 800 40px system-ui;
+}
+
+.randomStrong1::after {
+  content: counter(num1);
+}
+.randomStrong2 {
+  animation: counter 1.4s infinite alternate ease-in-out;
+  counter-reset: num2 var(--num2);
+  font: 800 40px system-ui;
+}
+.randomStrong2::after {
+  content: counter(num2);
+}
+.randomStrong3 {
+  animation: counter 1s infinite alternate ease-in-out;
+  counter-reset: num3 var(--num3);
+  font: 800 40px system-ui;
+}
+.randomStrong3::after {
+  content: counter(num3);
+}
+
+@keyframes counter {
+  from {
+    --num1: 0;
+    --num2: 0;
+    --num3: 0;
+  }
+  to {
+    --num1: 9;
+    --num2: 9;
+    --num3: 9;
+  }
+}
+
+
+.wordCarousel {
+  font-size: 36px;
+  font-weight: 100;
+  
+  div {
+      overflow: hidden;
+      position: relative;
+      float: right;
+      height: 65px;
+      padding-top: 10px;
+      margin-top: -10px;
+      li {
+        font-family: Poppins;
+        font-weight: 700;
+        padding: 0 10px;
+        height: 45px;
+        margin-bottom: 45px;
+        display: block;
+      }
+  }
+}
+
+.flip2 { animation: flip2 4s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 5s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+  0% { margin-top: -180px; }
+  5% { margin-top: -90px;  }
+  50% { margin-top: -90px; }
+  55% { margin-top: 0px; }
+  99.99% { margin-top: 0px; }
+  100% { margin-top: -270px; }
+}
+
+@keyframes flip3 {
+  0% { margin-top: -270px; }
+  5% { margin-top: -180px; }
+  33% { margin-top: -180px; }
+  38% { margin-top: -90px; }
+  66% { margin-top: -90px; }
+  71% { margin-top: 0px; }
+  99.99% { margin-top: 0px; }
+  100% { margin-top: -270px; }
+}
+
+@keyframes flip4 {
+  0% { margin-top: -360px; }
+  5% { margin-top: -270px; }
+  25% { margin-top: -270px; }
+  30% { margin-top: -180px; }
+  50% { margin-top: -180px; }
+  55% { margin-top: -90px; }
+  75% { margin-top: -90px; }
+  80% { margin-top: 0px; }
+  99.99% { margin-top: 0px; }
+  100% { margin-top: -270px; }
+}
