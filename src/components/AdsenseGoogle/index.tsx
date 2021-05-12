@@ -14,7 +14,7 @@ export function AdsenseGoogle({ timeout, classNames, slot, ...rest }) {
   }, []);
 
   useEffect(() => {
-    if (this.googleInit) clearTimeout(this.googleInit);
+    if (googleInit) clearTimeout(googleInit);
   }, [googleInit]);
 
   return (
