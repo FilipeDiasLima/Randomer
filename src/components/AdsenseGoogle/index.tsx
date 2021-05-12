@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 
 const googleAdId = 'ca-pub-4792845809342776';
 
+declare global {
+  interface Window {
+
+  }
+}
+
 export function AdsenseGoogle({ timeout, classNames, slot, ...rest }) {
   let googleInit = null;
 
   useEffect(() => {
     googleInit = setTimeout(() => {
       if (typeof window !== 'undefined')
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
     }, timeout);
   }, []);
 
