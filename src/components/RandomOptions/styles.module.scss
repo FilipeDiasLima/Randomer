@@ -23,6 +23,10 @@
       margin-top: -15px;
     }
   }
+
+  @media(max-width: 1700px) {
+    width: 65%;
+  }
 }
 
 .renderOptions {

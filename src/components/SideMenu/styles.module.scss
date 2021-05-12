@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row;
   font-family: MuseoModerno;
-  font-size: 45px;
+  font-size: 50px;
 
   p {
     color: #3DE26B;  
@@ -20,13 +20,13 @@
 }
 
 .buttonSelected {
-  min-width: 350px;
-  min-height: 220px;
-  width: 100%;
+  width: 350px;
+  height: 220px;
   border-radius: 20px;
   background: #EEFFF3;
   box-shadow: 0px 0px 15px rgba(61, 226, 107, 0.6);
   border: none;
+  padding: 0 10px;
   
   display: flex;
   flex-direction: column;
@@ -58,15 +58,42 @@
     border: 1px solid #3DE26B;
   }
   
+  @media(max-width: 1700px) {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px; 
+  }
+
+  @media(max-width: 1366px) {
+    width: 280px;
+    height: 190px;
+    border-radius: 10px; 
+    font-size: 18px;
+
+    > strong {
+      font-size: 34px;
+    }
+  }
+
+  @media(max-width: 1240px) {
+    width: 250px;
+    height: 170px;
+    font-size: 18px;
+
+    > strong {
+      font-size: 32px;
+    }
+  }
+
 }
 
 .buttonUnselected {
-  min-width: 350px;
-  min-height: 220px;
-  width: 100%;
+  width: 350px;
+  height: 220px;
   border-radius: 20px;
   background: #515151;
   border: none;
+  padding: 0 10px;
 
   display: flex;
   flex-direction: column;
@@ -97,6 +124,33 @@
   &:hover {
     border: 1px solid #3DE26B;
   }
+
+  @media(max-width: 1700px) {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px; 
+  }
+
+  @media(max-width: 1366px) {
+    width: 280px;
+    height: 190px;
+    border-radius: 10px; 
+    font-size: 18px;
+    
+    > strong {
+      font-size: 34px;
+    }
+  }
+
+  @media(max-width: 1240px) {
+    width: 250px;
+    height: 170px;
+    font-size: 18px;
+
+    > strong {
+      font-size: 32px;
+    }
+  }
 }
 
 .buttons {
@@ -126,7 +180,11 @@
 .randomStrong1 {
   animation: counter 1.6s infinite alternate ease-in-out;
   counter-reset: num1 var(--num1);
-  font: 800 40px system-ui;
+  font: 800 40px Poppins;
+
+  @media(max-width: 1366px) {
+    font-size: 35px;
+  }
 }
 
 .randomStrong1::after {
@@ -135,7 +193,11 @@
 .randomStrong2 {
   animation: counter 1.4s infinite alternate ease-in-out;
   counter-reset: num2 var(--num2);
-  font: 800 40px system-ui;
+  font: 800 40px Poppins;
+
+  @media(max-width: 1366px) {
+    font-size: 35px;
+  }
 }
 .randomStrong2::after {
   content: counter(num2);
@@ -143,7 +205,11 @@
 .randomStrong3 {
   animation: counter 1s infinite alternate ease-in-out;
   counter-reset: num3 var(--num3);
-  font: 800 40px system-ui;
+  font: 800 40px Poppins;
+
+  @media(max-width: 1366px) {
+    font-size: 35px;
+  }
 }
 .randomStrong3::after {
   content: counter(num3);
