@@ -9,7 +9,7 @@
 
 
 <div align="center">
-  <h2><a href="https://randomer.vercel.app/" target="_blank" rel="noopener noreferrer">RandomerApp</a></h2>
+  <h2> >> <a href="https://randomer.vercel.app/" target="_blank" rel="noopener noreferrer">RandomerApp</a> << </h2>
 </div>
 <br/>
 <br/>
